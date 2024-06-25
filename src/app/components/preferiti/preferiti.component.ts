@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PostsService } from '../../services/posts.service';
 
 @Component({
   selector: 'app-preferiti',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class PreferitiComponent {
 
+  constructor(public ps : PostsService){}
 }

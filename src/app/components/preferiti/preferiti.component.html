@@ -1,1 +1,12 @@
-<p>preferiti works!</p>
+<div *ngIf="ps.postPreferiti.length > 0">
+  <ul class="list-group mt-2">
+    <li class="list-group-item"
+      *ngFor="let p of ps.postPreferiti">
+      <button type="button" class="btn" (click)="ps.RimuoviPreferito(p)">
+        <i class="bi bi-trash"></i>
+      </button>
+      {{p.title}}
+    </li>
+  </ul>
+  <hr>
+</div>
