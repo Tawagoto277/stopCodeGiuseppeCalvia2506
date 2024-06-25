@@ -18,13 +18,9 @@ export class PostsService {
   }
 
   AggiungiPreferito(post : Post){
-
-    console.log('aggiungo');
-    console.log(this.postPreferiti);
     if(!this.postPreferiti.find(p => p.id == post.id)){
       this.postPreferiti.push(post);
     }
-    console.log(this.postPreferiti);
   }
 
   RimuoviPreferito(post : Post){
