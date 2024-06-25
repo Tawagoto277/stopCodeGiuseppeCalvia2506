@@ -1,12 +1,14 @@
 <div *ngIf="ps.postPreferiti.length > 0">
   <ul class="list-group mt-2">
-    <li class="list-group-item"
-      *ngFor="let p of ps.postPreferiti">
-      <button type="button" class="btn" (click)="ps.RimuoviPreferito(p)">
+    <li class="list-group-item mb-2" *ngFor="let p of ps.postPreferiti">
+      <button type="button" class="btn" (click)="ps.rimuoviPreferito(p)">
         <i class="bi bi-trash"></i>
       </button>
       {{p.title}}
     </li>
   </ul>
+  <button type="button" class="btn btn-danger" (click)="ps.svuotaPreferiti()">
+    Svuota
+  </button>
   <hr>
 </div>

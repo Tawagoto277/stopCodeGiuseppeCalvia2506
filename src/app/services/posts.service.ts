@@ -17,18 +17,22 @@ export class PostsService {
     return BLOGS.postCategories as PostCategory[];
   }
 
-  AggiungiPreferito(post : Post){
+  aggiungiPreferito(post : Post){
     if(!this.postPreferiti.find(p => p.id == post.id)){
       this.postPreferiti.push(post);
     }
   }
 
-  RimuoviPreferito(post : Post){
+  rimuoviPreferito(post : Post){
     const p = this.postPreferiti.find(p => p.id == post.id);
 
     if(p){
       const i = this.postPreferiti.indexOf(p);
       this.postPreferiti.splice(i ,1);
     }
+  }
+
+  svuotaPreferiti(){
+    this.postPreferiti = [];
   }
 }

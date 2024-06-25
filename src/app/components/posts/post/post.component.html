@@ -1,4 +1,3 @@
-
 <div class="card mb-4" *ngIf="post">
   <div class="card-body">
     <h5 class="card-title">{{post.title}}</h5>
@@ -7,7 +6,7 @@
     <p class="card-text">
       {{post.body}}
     </p>
-    <button type="button" class="btn btn-primary" (click)="ps.AggiungiPreferito(post)">
+    <button type="button" class="btn btn-primary" (click)="ps.aggiungiPreferito(post)">
       Aggiungi a preferiti
     </button>
   </div>
