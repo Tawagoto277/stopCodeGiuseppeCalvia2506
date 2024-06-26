@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PreferitiComponent } from './components/preferiti/preferiti.component';
 import { PostsComponent } from './components/posts/posts.component';
-import { NavbarComponent } from './components/posts/navbar/navbar.component';
 import { PostComponent } from './components/posts/post/post.component';
 
 @NgModule({
@@ -13,7 +12,6 @@ import { PostComponent } from './components/posts/post/post.component';
     AppComponent,
     PreferitiComponent,
     PostsComponent,
-    NavbarComponent,
     PostComponent
   ],
   imports: [
