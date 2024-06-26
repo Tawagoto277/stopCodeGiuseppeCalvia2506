@@ -9,8 +9,16 @@ export class PostsService {
 
   postPreferiti: Post[] = [];
 
+  selectedCategory?: PostCategory;
+
   getPost(){
     return BLOGS.posts as Post[];
+  }
+
+  getPostByCategoty(category: PostCategory){
+    this.selectedCategory = category;
+    const postF = BLOGS.posts;
+    return postF.filter(x => x.category == this.selectedCategory!.id);
   }
 
   getCategory(){

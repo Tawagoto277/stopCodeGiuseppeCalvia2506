@@ -1,7 +1,21 @@
 <h1>
   Posts
 </h1>
-<app-navbar></app-navbar>
+<div class="btn-group mb-2" role="group">
+  <button 
+    type="button" 
+    class="btn btn-outline-secondary"
+    (click)="filter(undefined)">
+      Tutti
+  </button>
+  <button 
+    type="button" 
+    class="btn btn-outline-secondary" 
+    *ngFor="let c of ps.getCategory()"
+    (click)="filter(c)">
+    {{c.title}}
+  </button>
+</div>
 <div class="container">
   <app-post
     *ngFor="let p of posts"
